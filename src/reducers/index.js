@@ -11,7 +11,7 @@ export default combineReducers({
   theme: themeReducer,
   user: userReducer,
   loading: loadingReducer,
-  error: errorReducer,
+  errors: errorReducer,
   products: ProductReducer,
   cart: cartReducer,
 });

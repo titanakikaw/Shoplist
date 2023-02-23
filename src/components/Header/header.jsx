@@ -25,8 +25,6 @@ function Header({ logout, cart }) {
   const toggleCheckout = () => {
     setOpen((val) => !val);
   };
-  console.log(open);
-
   return (
     <>
       <Disclosure as="nav" className="bg-gray-800">

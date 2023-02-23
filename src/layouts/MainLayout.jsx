@@ -12,8 +12,10 @@ const MainLayout = ({ user }) => {
 
   return (
     <>
-      <Header />
-      <Outlet />
+      <div data-testid="main-wrapper">
+        <Header />
+        <Outlet />
+      </div>
     </>
   );
 };

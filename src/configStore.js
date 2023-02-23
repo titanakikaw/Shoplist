@@ -10,7 +10,7 @@ const sagaMiddleware = createSagaMiddleware();
 const configStore = () => {
   const middlewares = [sagaMiddleware, errorMiddleware];
   const store = createStore(
-    rootReducer,
+    reducers,
     composeEnhancers(applyMiddleware(...middlewares))
   );
 

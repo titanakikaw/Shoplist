@@ -2,12 +2,11 @@ export const loadingInitialState = [];
 
 export const loadingReducer = (
   state = loadingInitialState,
-  { type, payload, meta }
+  { type, payload }
 ) => {
   const match = /(.*)_(REQUEST|SUCCESS|FAIL)/.exec(type);
 
   if (!match) return state;
-
   const [, actionType, actionName] = match;
   if (actionName === "REQUEST") {
     return [

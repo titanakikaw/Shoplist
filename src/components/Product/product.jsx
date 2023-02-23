@@ -1,6 +1,7 @@
 import { StarIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import React from "react";
+import { currency } from "../../utils/currency";
 
 const Product = ({
   product,
@@ -27,7 +28,9 @@ const Product = ({
         <section aria-labelledby="information-heading" className="mt-2">
           <h3 id="information-heading">{product.description}</h3>
 
-          <p className="text-2xl text-gray-900">{product.price}</p>
+          <p data-testid="price" className="text-2xl text-gray-900">
+            {currency(product.price)}
+          </p>
 
           {/* Reviews */}
           <div className="mt-6">

@@ -2,12 +2,14 @@ import { all, fork, takeLatest, call, put } from "redux-saga/effects";
 import axiosInstance from "../utils/axiosInstance";
 
 function* login({ payload, meta }) {
+  console.log(payload);
   try {
     const res = yield call(axiosInstance, {
       method: "POST",
-      url: "register",
+      url: "login",
       data: payload,
     });
+
     yield put({
       type: "LOGIN_SUCCESS",
       payload: res,

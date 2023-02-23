@@ -1,9 +1,7 @@
 import React, { useEffect, useCallback } from "react";
-import { useProductContext } from "../../context/productContext";
-import { useCartContext } from "../../context/cartContext";
 import Product from "../../components/Product";
 
-const Home = ({ products, loadProducts, loadCart }) => {
+const Home = ({ products, loadProducts, loadCart, loading, hasError }) => {
   const loadData = useCallback(async () => {
     await Promise.all([loadProducts(), loadCart()]);
   }, [loadProducts, loadCart]);
@@ -12,8 +10,16 @@ const Home = ({ products, loadProducts, loadCart }) => {
     loadData();
   }, [loadData]);
 
+  if (loading) {
+    return <h1 data-testid="loading">Loading...</h1>;
+  }
+
+  if (hasError) {
+    return <h1 data-testid="error">Something went wrong...</h1>;
+  }
+
   return (
-    <div>
+    <div data-testid="products-info">
       {products?.map((product) => {
         return <Product product={product} key={product.id} />;
       })}

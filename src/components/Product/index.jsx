@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addCart, deleteCart, updateCart } from "../../actions/cartActions";
+// import { addCart, deleteCart, updateCart } from "../../actions/cartActions";
 import Product from "./Product";
 
 const mapStateToProps = ({ cart, loading }, { product }) => ({
@@ -8,9 +8,42 @@ const mapStateToProps = ({ cart, loading }, { product }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addToCart: (data) => addCart(data)(dispatch),
-  updateCartItem: (data) => updateCart(data)(dispatch),
-  deleteCartItem: (data) => deleteCart(data)(dispatch),
+  addToCart: (data) =>
+    dispatch({
+      type: "ADD_CART_REQUEST",
+      payload: {
+        url: "660/cart",
+        method: "post",
+        data,
+      },
+      meta: {
+        loadingId: data.productId,
+      },
+    }),
+  updateCartItem: (data) =>
+    dispatch({
+      type: "UPDATE_CART_REQUEST",
+      payload: {
+        url: `660/cart/${data.id}`,
+        method: "put",
+        data,
+      },
+      meta: {
+        loadingId: data.productId,
+      },
+    }),
+  deleteCartItem: (data) =>
+    dispatch({
+      type: "DELETE_CART_REQUEST",
+      payload: {
+        url: `660/cart/${data.id}`,
+        method: "delete",
+        data,
+      },
+      meta: {
+        loadingId: data.productId,
+      },
+    }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Product);

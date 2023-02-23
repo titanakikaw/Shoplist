@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Outlet, Link, Navigate } from "react-router-dom";
 
 const AuthLayout = ({ user }) => {
-  console.log(user);
   if (user) {
     return <Navigate to="/dashboard" replace />;
   }

@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "email": "test@email.com",
-      "password": "$2a$10$TdCIMzG9.iFbNuJIe0Nr8Ollj6OFE.Y9Y/3gvLgp9GFFcTFJ6JK2q",
-      "id": 1
-    },
-    {
       "email": "test2@email.com",
       "password": "$2a$10$YbwtuS7B0Rm5bcn01AwMHOgQVFYq/.JBw5/OYDNfCxIIXhcKAIdvK",
       "name": "Marvin Orsua",
@@ -16,6 +11,29 @@
         "golf"
       ],
       "id": 2
+    },
+    {
+      "email": "orsuam@gmail.com",
+      "password": "$2a$10$p.tTZuaJxkzW4rytc9kUmud8.X.KOqkIaOj5S9dgT7lP9PsxUGgzi",
+      "name": "Marvin Orsua",
+      "confirmPassword": "12345",
+      "gender": "Male",
+      "hobbies": [
+        "golf",
+        "basketball"
+      ],
+      "id": 3
+    },
+    {
+      "email": "test@email.com",
+      "password": "$2a$10$nlfD0IGO7oRDiTWs1v46xuJ5LgAuQSJCuCr8h0CN4.MVqexngVPam",
+      "name": "Marvin Orsua",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "hobbies": [
+        "golf"
+      ],
+      "id": 4
     }
   ],
   "products": [
@@ -263,14 +281,44 @@
   "cart": [],
   "errors": [
     {
-      "message": "Request Timeout. try after sometime",
-      "createdAt": "Mon Feb 13 2023 12:01:02 GMT+0800 (Taipei Standard Time)",
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:53:28 GMT+0800 (Taipei Standard Time)",
       "id": 1
     },
     {
-      "message": "Password is too short",
-      "createdAt": "Mon Feb 13 2023 12:13:11 GMT+0800 (Taipei Standard Time)",
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:53:31 GMT+0800 (Taipei Standard Time)",
       "id": 2
+    },
+    {
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:54:44 GMT+0800 (Taipei Standard Time)",
+      "id": 3
+    },
+    {
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:54:54 GMT+0800 (Taipei Standard Time)",
+      "id": 4
+    },
+    {
+      "message": "Cannot find user",
+      "createdAt": "Thu Feb 23 2023 14:55:04 GMT+0800 (Taipei Standard Time)",
+      "id": 5
+    },
+    {
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:55:16 GMT+0800 (Taipei Standard Time)",
+      "id": 6
+    },
+    {
+      "message": "Incorrect password",
+      "createdAt": "Thu Feb 23 2023 14:55:21 GMT+0800 (Taipei Standard Time)",
+      "id": 7
+    },
+    {
+      "message": "Email and password are required",
+      "createdAt": "Thu Feb 23 2023 14:55:39 GMT+0800 (Taipei Standard Time)",
+      "id": 8
     }
   ]
 }

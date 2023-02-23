@@ -8,6 +8,7 @@ const Baselayout = () => {
 
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("token"));
+
     if (token) {
       dispatch({ type: "LOGIN_SUCCESS", payload: token });
     }
